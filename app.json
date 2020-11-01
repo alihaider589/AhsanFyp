@@ -1,0 +1,12 @@
+{
+  "name": "ahsanfyp",
+  "displayName": "ahsanfyp",
+  "expo": {
+    "name": "ahsanfyp",
+    "slug": "ahsanfyp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
