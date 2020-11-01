@@ -1,21 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Routes from './src/routes/routes'
+import firebase from 'firebase'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+export default class App extends Component {
+  componentWillMount(){
+    if(!firebase.app.length){
+    firebase.initializeApp({
+      
+      apiKey: "AIzaSyCLecy2i8vG1esvC3-KPV-wwR8orH_9O7Q",
+      authDomain: "csmn-f3ba2.firebaseapp.com",
+      databaseURL: "https://csmn-f3ba2.firebaseio.com",
+      projectId: "csmn-f3ba2",
+      storageBucket: "csmn-f3ba2.appspot.com",
+      messagingSenderId: "173044083717",
+      appId: "1:173044083717:web:aee099a9f92193ca64406c",
+      measurementId: "G-FJCG0Z9S5Q"
+          
+    })
+  }}
+  render(){
+
+    return (
+      <Routes />
+      );
+    }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
